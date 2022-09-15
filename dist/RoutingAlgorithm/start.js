@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 async function iniateFindingRoute(locationStringArray) {
     let costArray = new Array(locationStringArray.length).fill(0).map(() => new Array(locationStringArray.length));
     //Filling Array with cost of Routes
