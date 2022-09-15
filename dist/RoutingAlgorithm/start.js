@@ -70,6 +70,7 @@ async function calculateTravelTime(start, destination) {
     const config = {
         method: "GET"
     };
-    return fetch(URL, config).then((data) => { return data.json(); }).then((data) => { return data.resourceSets[0].resources[0].travelDuration; });
+    const data = await fetch(URL, config).then((data) => { return data.json(); }).then((data) => { return data.resourceSets[0].resources[0].travelDuration; });
+    return data;
 }
 module.exports = iniateFindingRoute;
