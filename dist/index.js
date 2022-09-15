@@ -6,6 +6,7 @@ const PORT = process.env.PORT
 app.use(express.json());
 //api Endpoint
 app.post('/api', async (req, res) => {
+    try{
     let arrayOfLocations = req.body.locations;
     if (!Array.isArray(arrayOfLocations)) {
         res.json({ "Error": "Wrong Data Format" });
@@ -21,7 +22,10 @@ app.post('/api', async (req, res) => {
         };
         res.json(answer);
     }
-});
+} catch(err){
+    console.log(err);
+    res.send('Error')
+}})
 //Other Endpoints do not exist
 app.route(/.*/).all((req, res) => {
     res.json({
