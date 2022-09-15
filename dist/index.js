@@ -2,7 +2,7 @@ const findRoute = require('./RoutingAlgorithm/start');
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT
 app.use(express.json());
 //api Endpoint
 app.post('/api', async (req, res) => {
