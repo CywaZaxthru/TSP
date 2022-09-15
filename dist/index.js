@@ -16,10 +16,13 @@ app.post('/api', async (req, res) => {
     }
     else {
         //Calculating Delivery Route
+       console.log('searching Route');
         let deliveryRoute = await findRoute(arrayOfLocations);
+       console.log('found Route');
         let answer = {
             "Route": deliveryRoute
         };
+       console.log(answer);
         res.json(answer);
     }
 })
