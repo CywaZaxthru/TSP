@@ -71,7 +71,7 @@ async function fillSquare(emptySquare: any[][], addressArray: String[]){
 }
 
 async function calculateTravelTime(start: String, destination: String){
-    const KEY = "AkQhNv7SE_-O8cXIsFiTiQcS82xr3PwK7tMd2kq0G6GHzWBCChZkMr-lq04Dzwwv";
+    const KEY = "";
     const URL = "https://dev.virtualearth.net/REST/v1/Routes?wayPoint.1="+start+"&viaWaypoint.2="+start+"&waypoint.3="+destination+"&optimize=time&distanceUnit=km&key="+KEY;
     const config = {
         method: "GET"
